@@ -1,0 +1,214 @@
+Pull Command
+git remote add origin <link of your central repository>
+git remote add origin "https://github.com/Maneesh1234/git_github.git"
+git pull origin main
+TO CLEAR PROMPT
+clear
+
+Untrack File
+Untrack file are those who are not added in the index yet.
+Maneesh Kumar@LAPTOP-DVR563TK MINGW64 /j/Git_Learning (master)
+- Creating new text file edu1.txt and check status of git
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        edu1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Maneesh Kumar@LAPTOP-DVR563TK MINGW64 /j/Git_Learning (master)
+ADD IN INDEXING
+$ git add edu1.txt
+
+Maneesh Kumar@LAPTOP-DVR563TK MINGW64 /j/Git_Learning (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   edu1.txt
+
+
+Maneesh Kumar@LAPTOP-DVR563TK MINGW64 /j/Git_Learning (master)
+COMMIT FILE
+$ git commit -m "adding first commit in local repo"
+[master 0c94d48] adding first commit in local repo
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 edu1.txt
+
+Maneesh Kumar@LAPTOP-DVR563TK MINGW64 /j/Git_Learning (master)
+
+ADDING ALL MULTIPLE FILE TOGETHER IN INDEXING
+- Creating again 2 new text file edu2.txt  edu3.txt and check status of git
+Check status
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        edu2.txt
+        edu3.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Maneesh Kumar@LAPTOP-DVR563TK MINGW64 /j/Git_Learning (master)
+Modified edu1.txt and check status
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   edu1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        edu2.txt
+        edu3.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Maneesh Kumar@LAPTOP-DVR563TK MINGW64 /j/Git_Learning (master)
+Add all file in indexing
+$ git add -A
+
+Maneesh Kumar@LAPTOP-DVR563TK MINGW64 /j/Git_Learning (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   edu1.txt
+        new file:   edu2.txt
+        new file:   edu3.txt
+
+
+Maneesh Kumar@LAPTOP-DVR563TK MINGW64 /j/Git_Learning (master)
+ADDING MULTIPLE FILE TO COMMIT FILE
+$ git commit -a -m "adding 3 files together"
+
+[master 70822ea] adding 3 files together
+ 3 files changed, 3 insertions(+)
+ create mode 100644 edu2.txt
+ create mode 100644 edu3.txt
+
+Maneesh Kumar@LAPTOP-DVR563TK MINGW64 /j/Git_Learning (master)
+
+
+Git stored all your commit
+$ git log
+commit 70822ea571755cc70967c5cbc5259aa4bc19bc6b (HEAD -> master)    //SHA1 HASH CODE
+Author: maneesh kumar <mk049076@gmail.com>
+Date:   Fri Nov 6 20:24:09 2020 +0530
+
+    adding 3 files together
+
+commit 0c94d48bb00c321c579c283d1170d61a81c94b8b
+Author: maneesh kumar <mk049076@gmail.com>
+Date:   Fri Nov 6 19:14:27 2020 +0530
+
+    adding first commit in local repo
+
+commit 399dc7234a9752595f2e9935e450095d480c0e6f (origin/main)
+Author: Maneesh1234 <51262723+Maneesh1234@users.noreply.github.com>
+Date:   Fri Nov 6 17:22:24 2020 +0530
+
+    Update README.md
+
+commit 2b01cd47f4c29463bf1b0beb8b4a9bd0bdbee18f
+Author: Maneesh1234 <51262723+Maneesh1234@users.noreply.github.com>
+Date:   Fri Nov 6 17:21:15 2020 +0530
+
+    Initial commit
+
+Maneesh Kumar@LAPTOP-DVR563TK MINGW64 /j/Git_Learning (master)
+
+CREATING NEW BRANCH
+Maneesh Kumar@LAPTOP-DVR563TK MINGW64 /j/Git_Learning (master)
+$ git branch firstbranch
+SWITCH TO ANOTHER BRANCH FROM MASTER BRANCH
+$ git checkout firstbranch
+Switched to branch 'firstbranch'
+
+Maneesh Kumar@LAPTOP-DVR563TK MINGW64 /j/Git_Learning (firstbranch)
+$ git add edu4.txt
+
+Maneesh Kumar@LAPTOP-DVR563TK MINGW64 /j/Git_Learning (firstbranch)
+$ git commit -m "making changes in firstbranches"
+[firstbranch c80e18d] making changes in firstbranches
+ 1 file changed, 1 insertion(+)
+ create mode 100644 edu4.txt
+
+Maneesh Kumar@LAPTOP-DVR563TK MINGW64 /j/Git_Learning (firstbranch)
+Check File In Firstbranch and Master  branch
+$ ls
+edu1.txt  edu2.txt  edu3.txt  edu4.txt  README.md
+
+Maneesh Kumar@LAPTOP-DVR563TK MINGW64 /j/Git_Learning (firstbranch)
+$ git checkout main
+Switched to a new branch 'main'
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+Maneesh Kumar@LAPTOP-DVR563TK MINGW64 /j/Git_Learning (main)
+$ ls
+README.md
+
+Maneesh Kumar@LAPTOP-DVR563TK MINGW64 /j/Git_Learning (main)
+$ git checkout main
+Already on 'main'
+Your branch is up to date with 'origin/main'.
+
+Maneesh Kumar@LAPTOP-DVR563TK MINGW64 /j/Git_Learning (main)
+$ git checkout master
+Switched to branch 'master'
+
+Maneesh Kumar@LAPTOP-DVR563TK MINGW64 /j/Git_Learning (master)
+$ ls
+edu1.txt  edu2.txt  edu3.txt  README.md
+
+Maneesh Kumar@LAPTOP-DVR563TK MINGW64 /j/Git_Learning (master)
+Merging All branch Into Master Branch
+$ git merge firstbranch
+Updating 70822ea..c80e18d
+Fast-forward
+ edu4.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 edu4.txt
+
+Maneesh Kumar@LAPTOP-DVR563TK MINGW64 /j/Git_Learning (master)
+$ ls
+edu1.txt  edu2.txt  edu3.txt  edu4.txt  README.md
+
+
+Modified first branch file and check how is it affected
+Maneesh Kumar@LAPTOP-DVR563TK MINGW64 /j/Git_Learning (master)
+$ git checkout firstbranch
+Switched to branch 'firstbranch'
+M       edu4.txt
+
+Maneesh Kumar@LAPTOP-DVR563TK MINGW64 /j/Git_Learning (firstbranch)
+$ git commit -a -m "modified edu4"
+[firstbranch 0a29e2b] modified edu4
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Maneesh Kumar@LAPTOP-DVR563TK MINGW64 /j/Git_Learning (firstbranch)
+$ cat edu4.txt
+firstbranch first file. Modified first branch.
+Maneesh Kumar@LAPTOP-DVR563TK MINGW64 /j/Git_Learning (firstbranch)
+$ git checkout master
+Switched to branch 'master'
+
+Maneesh Kumar@LAPTOP-DVR563TK MINGW64 /j/Git_Learning (master)
+$ cat edu4.txt
+firstbranch first file       //Hence master does not affected because we does not perform 
+                                         //merging at this time
+Maneesh Kumar@LAPTOP-DVR563TK MINGW64 /j/Git_Learning (master)
+
+
+Difference Between Git Pull and Git Fetch
+Git Pull  pulls all the files and change file from central repository and place them or connect them in your master 
+Branch.
+
