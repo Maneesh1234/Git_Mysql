@@ -1,0 +1,768 @@
+ Creating a database with MyISAM as Engine-
+
+create database  EmpWithMyISAM;
+
+use  EmpWithMyISAM;
+
+create table EmpWithMyISAM (Id int, EmpName varchar(100),EmpAge int) ENGINE=MyISAM;
+
+DESC EmpWithMyISAM
+
+
+
+
+
+show tables;
+
+mysql> show tables;
+
++-------------------------+
+
+| Tables_in_empwithmyisam |
+
++-------------------------+
+
+| empwithmyisam           |
+
++-------------------------+
+
+1 row in set (0.00 sec)
+
+
+mysql> SELECT TABLE_NAME,ENGINE FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'EmpWithMyISAM' and ENGINE = 'MyISAM';
++---------------+--------+
+| TABLE_NAME    | ENGINE |
++---------------+--------+
+| empwithmyisam | MyISAM |
++---------------+--------+
+1 row in set (0.00 sec)
+
+CREATING SECOND DATABASE
+
+mysql> create database  TomWithMyISAM;
+Query OK, 1 row affected (0.10 sec)
+
+mysql> show databases;
++-------------------------+
+| Database                |
++-------------------------+
+| employee_auth           |
+| employee_db             |
+| empwithmyisam           |
+| form                    |
+| goblog                  |
+| golang                  |
+| information_schema      |
+| maneeshwithmyisam       |
+| mysql                   |
+| performance_schema      |
+| product_db              |
+| sakila                  |
+| studentrecordwithmyisam |
+| sys                     |
+| todoapp                 |
+| tomwithmyisam           |
+| world                   |
++-------------------------+
+17 rows in set (0.00 sec)
+
+mysql> USE TomWithMyISAM;
+Database changed
+
+mysql> create table TomWithMyISAM (Id int, EmpName varchar(100),EmpAge int) ENGINE=MyISAM;
+Query OK, 0 rows affected (0.18 sec)
+
+mysql> DESC TomWithMyISAM;
++---------+--------------+------+-----+---------+-------+
+| Field   | Type         | Null | Key | Default | Extra |
++---------+--------------+------+-----+---------+-------+
+| Id      | int          | YES  |     | NULL    |       |
+| EmpName | varchar(100) | YES  |     | NULL    |       |
+| EmpAge  | int          | YES  |     | NULL    |       |
++---------+--------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+ show databases;
++-------------------------+
+| Database                |
++-------------------------+
+| employee_auth           |
+| employee_db             |
+| empwithmyisam           |
+| form                    |
+| goblog                  |
+| golang                  |
+| information_schema      |
+| maneeshwithmyisam       |
+| mysql                   |
+| performance_schema      |
+| product_db              |
+| sakila                  |
+| studentrecordwithmyisam |
+| sys                     |
+| todoapp                 |
+| tomwithmyisam           |
+| world                   |
++-------------------------+
+17 rows in set (0.00 sec)
+
+**********************************THIRD DATABASE******************************************
+mysql> USE ManeeshWithMyISAM;
+Database changed
+mysql> create table ManeeshWithMyISAM (Id int, EmpName varchar(100),EmpAge int) ENGINE=MyISAM;
+Query OK, 0 rows affected (0.18 sec)
+
+mysql>
+
+mysql> DESC ManeeshWithMyISAM;
++---------+--------------+------+-----+---------+-------+
+| Field   | Type         | Null | Key | Default | Extra |
++---------+--------------+------+-----+---------+-------+
+| Id      | int          | YES  |     | NULL    |       |
+| EmpName | varchar(100) | YES  |     | NULL    |       |
+| EmpAge  | int          | YES  |     | NULL    |       |
++---------+--------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql>
+
+**********************************4 DATABASE******************************************
+
+
+mysql> create database  JohnWithMyISAM;
+Query OK, 1 row affected (0.11 sec)
+
+mysql> USE JohnWithMyISAM;
+Database changed
+mysql> create table JohnWithMyISAM (Id int not null ,PRIMARY KEY (id), data VARCHAR(20) NOT NULL) ENGINE=MyISAM;
+Query OK, 0 rows affected (0.26 sec)
+
+mysql> DESC JohnWithMyISAM;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| Id    | int         | NO   | PRI | NULL    |       |
+| data  | varchar(20) | NO   |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql>
+
+**********************************5 DATABASE******************************************
+
+
+
+mysql> create database  kloudWithMyISAM;
+Query OK, 1 row affected (0.09 sec)
+
+mysql> USE kloudWithMyISAM;
+Database changed
+mysql> create table kloudWithMyISAM (Id int not null ,PRIMARY KEY (id), data VARCHAR(20) NOT NULL) ENGINE=MyISAM;
+Query OK, 0 rows affected (0.17 sec)
+
+mysql> DESC kloudWithMyISAM;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| Id    | int         | NO   | PRI | NULL    |       |
+| data  | varchar(20) | NO   |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql>
+
+******Create data into those myisam tables*******
+mysql> USE EmpWithMyISAM;
+Database changed
+mysql> INSERT INTO EmpWithMyISAM values(1 , 'maneesh' , '21');
+Query OK, 1 row affected (0.22 sec)
+
+mysql> INSERT INTO EmpWithMyISAM values(2 , 'deepak' , '21');
+Query OK, 1 row affected (0.06 sec)
+
+mysql> INSERT INTO EmpWithMyISAM values(3 , 'Raju' , '21');
+Query OK, 1 row affected (0.05 sec)
+
+mysql> INSERT INTO EmpWithMyISAM values(4 , 'Rakesh' , '21');
+Query OK, 1 row affected (0.10 sec)
+
+mysql> INSERT INTO EmpWithMyISAM values(5 , 'anju' , '21');
+Query OK, 1 row affected (0.03 sec)
+
+mysql> INSERT INTO EmpWithMyISAM values(6 , 'lucy' , '21');
+Query OK, 1 row affected (0.06 sec)
+
+mysql> INSERT INTO EmpWithMyISAM values(7 , 'saurabh' , '21');
+Query OK, 1 row affected (0.06 sec)
+
+mysql> INSERT INTO EmpWithMyISAM values(8 , 'abhishek' , '21');
+Query OK, 1 row affected (0.06 sec)
+
+mysql>
+mysql> select * from EmpWithMyISAM
+    -> ;
++------+----------+--------+
+| Id   | EmpName  | EmpAge |
++------+----------+--------+
+|    1 | maneesh  |     21 |
+|    2 | deepak   |     21 |
+|    3 | Raju     |     21 |
+|    4 | Rakesh   |     21 |
+|    5 | anju     |     21 |
+|    6 | lucy     |     21 |
+|    7 | saurabh  |     21 |
+|    8 | abhishek |     21 |
++------+----------+--------+
+8 rows in set (0.00 sec)
+
+mysql> use  TomWithMyISAM;
+Database changed
+mysql> DESC TomWithMyISAM;
++---------+--------------+------+-----+---------+-------+
+| Field   | Type         | Null | Key | Default | Extra |
++---------+--------------+------+-----+---------+-------+
+| Id      | int          | YES  |     | NULL    |       |
+| EmpName | varchar(100) | YES  |     | NULL    |       |
+| EmpAge  | int          | YES  |     | NULL    |       |
++---------+--------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql>
+
+mysql> INSERT INTO TomWithMyISAM values(9 , 'dhoni' , '21');
+Query OK, 1 row affected (0.07 sec)
+
+mysql> INSERT INTO TomWithMyISAM values(10 , 'virat' , '35');
+Query OK, 1 row affected (0.06 sec)
+
+mysql> INSERT INTO TomWithMyISAM values(11 , 'sachin' , '35');
+Query OK, 1 row affected (0.06 sec)
+
+mysql> INSERT INTO TomWithMyISAM values(12 , 'amir' , '35');
+Query OK, 1 row affected (0.04 sec)
+
+mysql> INSERT INTO TomWithMyISAM values(11 , 'amir2' , '35');
+Query OK, 1 row affected (0.06 sec)
+
+mysql> INSERT INTO TomWithMyISAM values(13 , 'amir2' , '35');
+Query OK, 1 row affected (0.07 sec)
+
+mysql> select * from TomWithMyISAM;
++------+---------+--------+
+| Id   | EmpName | EmpAge |
++------+---------+--------+
+|    9 | dhoni   |     21 |
+|   10 | virat   |     35 |
+|   11 | sachin  |     35 |
+|   12 | amir    |     35 |
+|   11 | amir2   |     35 |
+|   13 | amir2   |     35 |
++------+---------+--------+
+6 rows in set (0.00 sec)
+
+
+mysql> USE ManeeshWithMyISAM;
+Database changed
+mysql> DESC ManeeshWithMyISAM;
++---------+--------------+------+-----+---------+-------+
+| Field   | Type         | Null | Key | Default | Extra |
++---------+--------------+------+-----+---------+-------+
+| Id      | int          | YES  |     | NULL    |       |
+| EmpName | varchar(100) | YES  |     | NULL    |       |
+| EmpAge  | int          | YES  |     | NULL    |       |
++---------+--------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> INSERT INTO ManeeshWithMyISAM values(100 , 'Maneesh1' , '22');
+Query OK, 1 row affected (0.06 sec)
+
+mysql> INSERT INTO ManeeshWithMyISAM values(101 , 'Maneesh2' , '22');
+Query OK, 1 row affected (0.03 sec)
+
+mysql> INSERT INTO ManeeshWithMyISAM values(103 , 'Maneesh3' , '22');
+Query OK, 1 row affected (0.07 sec)
+
+mysql> INSERT INTO ManeeshWithMyISAM values(104 , 'Maneesh4' , '22');
+Query OK, 1 row affected (0.06 sec)
+
+mysql> INSERT INTO ManeeshWithMyISAM values(105 , 'Maneesh5' , '22');
+Query OK, 1 row affected (0.06 sec)
+
+mysql> INSERT INTO ManeeshWithMyISAM values(106 , 'Maneesh6' , '22');
+Query OK, 1 row affected (0.05 sec)
+
+mysql> select * from ManeeshWithMyISAM;
++------+----------+--------+
+| Id   | EmpName  | EmpAge |
++------+----------+--------+
+|  100 | Maneesh1 |     22 |
+|  101 | Maneesh2 |     22 |
+|  103 | Maneesh3 |     22 |
+|  104 | Maneesh4 |     22 |
+|  105 | Maneesh5 |     22 |
+|  106 | Maneesh6 |     22 |
++------+----------+--------+
+6 rows in set (0.00 sec)
+
+mysql>
+
+
+mysql> use JohnWithMyISAM;
+Database changed
+mysql> DESC johnWithMyISAM;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| Id    | int         | NO   | PRI | NULL    |       |
+| data  | varchar(20) | NO   |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql>
+
+mysql> INSERT INTO johnWithMyISAM (id,data) VALUES(1,'john');
+Query OK, 1 row affected (0.10 sec)
+
+mysql> INSERT INTO johnWithMyISAM (id,data) VALUES(2,'john2');
+Query OK, 1 row affected (0.09 sec)
+
+mysql> INSERT INTO johnWithMyISAM (id,data) VALUES(3,'john3');
+Query OK, 1 row affected (0.07 sec)
+
+mysql> INSERT INTO johnWithMyISAM (id,data) VALUES(4,'john4');
+Query OK, 1 row affected (0.07 sec)
+
+mysql> INSERT INTO johnWithMyISAM (id,data) VALUES(5,'john5');
+Query OK, 1 row affected (0.06 sec)
+
+mysql> INSERT INTO johnWithMyISAM (id,data) VALUES(6,'john6');
+Query OK, 1 row affected (0.06 sec)
+
+mysql> select * from JohnWithMyISAM;
++----+-------+
+| Id | data  |
++----+-------+
+|  1 | john  |
+|  2 | john2 |
+|  3 | john3 |
+|  4 | john4 |
+|  5 | john5 |
+|  6 | john6 |
++----+-------+
+6 rows in set (0.00 sec)
+
+mysql>
+
+
+mysql> USE kloudWithMyISAM;
+Database changed
+mysql> DESC kloudWithMyISAM;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| Id    | int         | NO   | PRI | NULL    |       |
+| data  | varchar(20) | NO   |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql>
+
+mysql> INSERT INTO kloudWithMyISAM (id,data) VALUES(20,'kloud');
+Query OK, 1 row affected (0.06 sec)
+
+mysql> INSERT INTO kloudWithMyISAM (id,data) VALUES(21,'kloud1');
+Query OK, 1 row affected (0.06 sec)
+
+mysql> INSERT INTO kloudWithMyISAM (id,data) VALUES(22,'kloud2');
+Query OK, 1 row affected (0.07 sec)
+
+mysql> INSERT INTO kloudWithMyISAM (id,data) VALUES(24,'kloud4');
+Query OK, 1 row affected (0.06 sec)
+
+mysql> INSERT INTO kloudWithMyISAM (id,data) VALUES(25,'kloud5');
+Query OK, 1 row affected (0.06 sec)
+
+mysql> INSERT INTO kloudWithMyISAM (id,data) VALUES(26,'kloud6');
+Query OK, 1 row affected (0.06 sec)
+
+mysql> select * from kloudWithMyISAM;
++----+--------+
+| Id | data   |
++----+--------+
+| 20 | kloud  |
+| 21 | kloud1 |
+| 22 | kloud2 |
+| 24 | kloud4 |
+| 25 | kloud5 |
+| 26 | kloud6 |
++----+--------+
+6 rows in set (0.00 sec)
+
+mysql>
+
+
+********see how to change tables from myisam to innodb without losing any data in the tables. check what are the different ways you can change it.**********
+
+mysql> USE EmpWithMyISAM;
+Database changed
+mysql> DESC EmpWithMyISAM;
++---------+--------------+------+-----+---------+-------+
+| Field   | Type         | Null | Key | Default | Extra |
++---------+--------------+------+-----+---------+-------+
+| Id      | int          | YES  |     | NULL    |       |
+| EmpName | varchar(100) | YES  |     | NULL    |       |
+| EmpAge  | int          | YES  |     | NULL    |       |
++---------+--------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> select * from EmpWithMyISAM;
++------+----------+--------+
+| Id   | EmpName  | EmpAge |
++------+----------+--------+
+|    1 | maneesh  |     21 |
+|    2 | deepak   |     21 |
+|    3 | Raju     |     21 |
+|    4 | Rakesh   |     21 |
+|    5 | anju     |     21 |
+|    6 | lucy     |     21 |
+|    7 | saurabh  |     21 |
+|    8 | abhishek |     21 |
++------+----------+--------+
+8 rows in set (0.00 sec)
+
+mysql> alter table EmpWithMyISAM ENGINE=InnoDB;
+Query OK, 8 rows affected (2.58 sec)
+Records: 8  Duplicates: 0  Warnings:
+
+mysql> show create table EmpWithMyISAM;
++---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Table         | Create Table                                                                                                                                                                                  |
++---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| EmpWithMyISAM | CREATE TABLE `empwithmyisam` (
+  `Id` int DEFAULT NULL,
+  `EmpName` varchar(100) DEFAULT NULL,
+  `EmpAge` int DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci |
++---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.05 sec)
+
+mysql> set @@default_storage_engine = 'MyISAM';
+Query OK, 0 rows affected (0.05 sec)
+
+
+mysql> show engines;
++--------------------+---------+----------------------------------------------------------------+--------------+------+------------+
+| Engine             | Support | Comment                                                        | Transactions | XA   | Savepoints |
++--------------------+---------+----------------------------------------------------------------+--------------+------+------------+
+| MEMORY             | YES     | Hash based, stored in memory, useful for temporary tables      | NO           | NO   | NO         |
+| MRG_MYISAM         | YES     | Collection of identical MyISAM tables                          | NO           | NO   | NO         |
+| CSV                | YES     | CSV storage engine                                             | NO           | NO   | NO         |
+| FEDERATED          | NO      | Federated MySQL storage engine                                 | NULL         | NULL | NULL       |
+| PERFORMANCE_SCHEMA | YES     | Performance Schema                                             | NO           | NO   | NO         |
+| MyISAM             | DEFAULT | MyISAM storage engine                                          | NO           | NO   | NO         |
+| InnoDB             | YES     | Supports transactions, row-level locking, and foreign keys     | YES          | YES  | YES        |
+| BLACKHOLE          | YES     | /dev/null storage engine (anything you write to it disappears) | NO           | NO   | NO         |
+| ARCHIVE            | YES     | Archive storage engine                                         | NO           | NO   | NO         |
++--------------------+---------+----------------------------------------------------------------+--------------+------+------------+
+9 rows in set (0.00 sec)
+
+mysql> show databases;
++-------------------------+
+| Database                |
++-------------------------+
+| employee_auth           |
+| employee_db             |
+| empwithmyisam           |
+| form                    |
+| goblog                  |
+| golang                  |
+| information_schema      |
+| johnwithmyisam          |
+| kloudwithmyisam         |
+| maneeshwithmyisam       |
+| mysql                   |
+| performance_schema      |
+| product_db              |
+| sakila                  |
+| studentrecordwithmyisam |
+| sys                     |
+| todoapp                 |
+| tomwithmyisam           |
+| world                   |
++-------------------------+
+19 rows in set (0.00 sec)
+
+
+mysql> USE TomWithMyISAM;
+Database changed
+mysql> Desc TomWithMyISAM;
++---------+--------------+------+-----+---------+-------+
+| Field   | Type         | Null | Key | Default | Extra |
++---------+--------------+------+-----+---------+-------+
+| Id      | int          | YES  |     | NULL    |       |
+| EmpName | varchar(100) | YES  |     | NULL    |       |
+| EmpAge  | int          | YES  |     | NULL    |       |
++---------+--------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> select * from TomWithMyISAM;
++------+---------+--------+
+| Id   | EmpName | EmpAge |
++------+---------+--------+
+|    9 | dhoni   |     21 |
+|   10 | virat   |     35 |
+|   11 | sachin  |     35 |
+|   12 | amir    |     35 |
+|   11 | amir2   |     35 |
+|   13 | amir2   |     35 |
++------+---------+--------+
+6 rows in set (0.00 sec)
+
+mysql> alter table TomWithMyISAM ENGINE=InnoDB;
+Query OK, 6 rows affected (1.64 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+mysql> show create table TomWithMyISAM;
++---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Table         | Create Table                                                                                                                                                                                  |
++---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| TomWithMyISAM | CREATE TABLE `tomwithmyisam` (
+  `Id` int DEFAULT NULL,
+  `EmpName` varchar(100) DEFAULT NULL,
+  `EmpAge` int DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci |
++---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> show databases;
++-------------------------+
+| Database                |
++-------------------------+
+| employee_auth           |
+| employee_db             |
+| empwithmyisam           |
+| form                    |
+| goblog                  |
+| golang                  |
+| information_schema      |
+| johnwithmyisam          |
+| kloudwithmyisam         |
+| maneeshwithmyisam       |
+| mysql                   |
+| performance_schema      |
+| product_db              |
+| sakila                  |
+| studentrecordwithmyisam |
+| sys                     |
+| todoapp                 |
+| tomwithmyisam           |
+| world                   |
++-------------------------+
+19 rows in set (0.05 sec)
+
+mysql>
+
+mysql> USE maneeshWithMyISAM;
+Database changed
+mysql> DESC maneeshWithMyISAM;
++---------+--------------+------+-----+---------+-------+
+| Field   | Type         | Null | Key | Default | Extra |
++---------+--------------+------+-----+---------+-------+
+| Id      | int          | YES  |     | NULL    |       |
+| EmpName | varchar(100) | YES  |     | NULL    |       |
+| EmpAge  | int          | YES  |     | NULL    |       |
++---------+--------------+------+-----+---------+-------+
+3 rows in set (0.03 sec)
+
+mysql> select * from maneeshWithMyISAM;
++------+----------+--------+
+| Id   | EmpName  | EmpAge |
++------+----------+--------+
+|  100 | Maneesh1 |     22 |
+|  101 | Maneesh2 |     22 |
+|  103 | Maneesh3 |     22 |
+|  104 | Maneesh4 |     22 |
+|  105 | Maneesh5 |     22 |
+|  106 | Maneesh6 |     22 |
++------+----------+--------+
+6 rows in set (0.00 sec)
+
+mysql> alter table maneeshWithMyISAM ENGINE=InnoDB;
+Query OK, 6 rows affected (1.27 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+mysql> show create table maneeshWithMyISAM;
++-------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Table             | Create Table                                                                                                                                                                                      |
++-------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| maneeshWithMyISAM | CREATE TABLE `maneeshwithmyisam` (
+  `Id` int DEFAULT NULL,
+  `EmpName` varchar(100) DEFAULT NULL,
+  `EmpAge` int DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci |
++-------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql>
+
+mysql> USe johnWithMyISAM;
+Database changed
+mysql> DESC johnWithMyISAM;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| Id    | int         | NO   | PRI | NULL    |       |
+| data  | varchar(20) | NO   |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+2 rows in set (0.05 sec)
+
+mysql> select * from johnWithMyISAM;
++----+-------+
+| Id | data  |
++----+-------+
+|  1 | john  |
+|  2 | john2 |
+|  3 | john3 |
+|  4 | john4 |
+|  5 | john5 |
+|  6 | john6 |
++----+-------+
+6 rows in set (0.00 sec)
+
+mysql> alter table johnWithMyISAM ENGINE=InnoDB;
+Query OK, 6 rows affected (1.15 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+mysql> show create table johnWithMyISAM;
++----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Table          | Create Table                                                                                                                                                                |
++----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| johnWithMyISAM | CREATE TABLE `johnwithmyisam` (
+  `Id` int NOT NULL,
+  `data` varchar(20) NOT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci |
++----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql>
+
+mysql> USe kloudWithMyISAM;
+Database changed
+mysql> DESC kloudWithMyISAM;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| Id    | int         | NO   | PRI | NULL    |       |
+| data  | varchar(20) | NO   |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> select * from kloudWithMyISAM;
++----+--------+
+| Id | data   |
++----+--------+
+| 20 | kloud  |
+| 21 | kloud1 |
+| 22 | kloud2 |
+| 24 | kloud4 |
+| 25 | kloud5 |
+| 26 | kloud6 |
++----+--------+
+6 rows in set (0.00 sec)
+
+mysql> alter table kloudWithMyISAM ENGINE=InnoDB;
+Query OK, 6 rows affected (0.79 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+mysql> show create table kloudWithMyISAM;
++-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Table           | Create Table                                                                                                                                                                 |
++-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| kloudWithMyISAM | CREATE TABLE `kloudwithmyisam` (
+  `Id` int NOT NULL,
+  `data` varchar(20) NOT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci |
++-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+
+*********************************validate the data after migrating tables from myisam to innodb*********************************
+mysql> select * from kloudWithMyISAM;
++----+--------+
+| Id | data   |
++----+--------+
+| 20 | kloud  |
+| 21 | kloud1 |
+| 22 | kloud2 |
+| 24 | kloud4 |
+| 25 | kloud5 |
+| 26 | kloud6 |
++----+--------+
+6 rows in set (0.00 sec)
+
+
+mysql> show table status from kloudWithMyISAM;
++-----------------+--------+---------+------------+------+----------------+-------------+-----------------+--------------+-----------+----------------+---------------------+-------------+------------+--------------------+----------+----------------+---------+
+| Name            | Engine | Version | Row_format | Rows | Avg_row_length | Data_length | Max_data_length | Index_length | Data_free | Auto_increment | Create_time         | Update_time | Check_time | Collation          | Checksum | Create_options | Comment |
++-----------------+--------+---------+------------+------+----------------+-------------+-----------------+--------------+-----------+----------------+---------------------+-------------+------------+--------------------+----------+----------------+---------+
+| kloudwithmyisam | InnoDB |      10 | Dynamic    |    6 |           2730 |       16384 |               0 |            0 |         0 |              1 | 2021-02-28 18:33:11 | NULL        | NULL       | utf8mb4_0900_ai_ci |     NULL |                |         |
++-----------------+--------+---------+------------+------+----------------+-------------+-----------------+--------------+-----------+----------------+---------------------+-------------+------------+--------------------+----------+----------------+---------+
+1 row in set (0.12 sec)
+
+mysql> show table status from EmpWithMyISAM;
++---------------+--------+---------+------------+------+----------------+-------------+-----------------+--------------+-----------+----------------+---------------------+-------------+------------+--------------------+----------+----------------+---------+
+| Name          | Engine | Version | Row_format | Rows | Avg_row_length | Data_length | Max_data_length | Index_length | Data_free | Auto_increment | Create_time         | Update_time | Check_time | Collation          | Checksum | Create_options | Comment |
++---------------+--------+---------+------------+------+----------------+-------------+-----------------+--------------+-----------+----------------+---------------------+-------------+------------+--------------------+----------+----------------+---------+
+| empwithmyisam | InnoDB |      10 | Dynamic    |    8 |           2048 |       16384 |               0 |            0 |         0 |              1 | 2021-02-28 18:13:03 | NULL        | NULL       | utf8mb4_0900_ai_ci |     NULL |                |         |
++---------------+--------+---------+------------+------+----------------+-------------+-----------------+--------------+-----------+----------------+---------------------+-------------+------------+--------------------+----------+----------------+---------+
+1 row in set (0.07 sec)
+
+mysql> show table status from TomWithMyISAM;
++---------------+--------+---------+------------+------+----------------+-------------+-----------------+--------------+-----------+----------------+---------------------+-------------+------------+--------------------+----------+----------------+---------+
+| Name          | Engine | Version | Row_format | Rows | Avg_row_length | Data_length | Max_data_length | Index_length | Data_free | Auto_increment | Create_time         | Update_time | Check_time | Collation          | Checksum | Create_options | Comment |
++---------------+--------+---------+------------+------+----------------+-------------+-----------------+--------------+-----------+----------------+---------------------+-------------+------------+--------------------+----------+----------------+---------+
+| tomwithmyisam | InnoDB |      10 | Dynamic    |    6 |           2730 |       16384 |               0 |            0 |         0 |              1 | 2021-02-28 18:22:06 | NULL        | NULL       | utf8mb4_0900_ai_ci |     NULL |                |         |
++---------------+--------+---------+------------+------+----------------+-------------+-----------------+--------------+-----------+----------------+---------------------+-------------+------------+--------------------+----------+----------------+---------+
+1 row in set (0.09 sec)
+
+mysql> show table status from maneeshWithMyISAM;
++-------------------+--------+---------+------------+------+----------------+-------------+-----------------+--------------+-----------+----------------+---------------------+-------------+------------+--------------------+----------+----------------+---------+
+| Name              | Engine | Version | Row_format | Rows | Avg_row_length | Data_length | Max_data_length | Index_length | Data_free | Auto_increment | Create_time         | Update_time | Check_time | Collation          | Checksum | Create_options | Comment |
++-------------------+--------+---------+------------+------+----------------+-------------+-----------------+--------------+-----------+----------------+---------------------+-------------+------------+--------------------+----------+----------------+---------+
+| maneeshwithmyisam | InnoDB |      10 | Dynamic    |    6 |           2730 |       16384 |               0 |            0 |         0 |              1 | 2021-02-28 18:26:07 | NULL        | NULL       | utf8mb4_0900_ai_ci |     NULL |                |         |
++-------------------+--------+---------+------------+------+----------------+-------------+-----------------+--------------+-----------+----------------+---------------------+-------------+------------+--------------------+----------+----------------+---------+
+1 row in set (0.09 sec)
+
+mysql> show table status from johnWithMyISAM;
++----------------+--------+---------+------------+------+----------------+-------------+-----------------+--------------+-----------+----------------+---------------------+-------------+------------+--------------------+----------+----------------+---------+
+| Name           | Engine | Version | Row_format | Rows | Avg_row_length | Data_length | Max_data_length | Index_length | Data_free | Auto_increment | Create_time         | Update_time | Check_time | Collation          | Checksum | Create_options | Comment |
++----------------+--------+---------+------------+------+----------------+-------------+-----------------+--------------+-----------+----------------+---------------------+-------------+------------+--------------------+----------+----------------+---------+
+| johnwithmyisam | InnoDB |      10 | Dynamic    |    6 |           2730 |       16384 |               0 |            0 |         0 |              1 | 2021-02-28 18:29:24 | NULL        | NULL       | utf8mb4_0900_ai_ci |     NULL |                |         |
++----------------+--------+---------+------------+------+----------------+-------------+-----------------+--------------+-----------+----------------+---------------------+-------------+------------+--------------------+----------+----------------+---------+
+1 row in set (0.07 sec)
+
+mysql> show table status from kloudWithMyISAM;
++-----------------+--------+---------+------------+------+----------------+-------------+-----------------+--------------+-----------+----------------+---------------------+-------------+------------+--------------------+----------+----------------+---------+
+| Name            | Engine | Version | Row_format | Rows | Avg_row_length | Data_length | Max_data_length | Index_length | Data_free | Auto_increment | Create_time         | Update_time | Check_time | Collation          | Checksum | Create_options | Comment |
++-----------------+--------+---------+------------+------+----------------+-------------+-----------------+--------------+-----------+----------------+---------------------+-------------+------------+--------------------+----------+----------------+---------+
+| kloudwithmyisam | InnoDB |      10 | Dynamic    |    6 |           2730 |       16384 |               0 |            0 |         0 |              1 | 2021-02-28 18:33:11 | NULL        | NULL       | utf8mb4_0900_ai_ci |     NULL |                |         |
++-----------------+--------+---------+------------+------+----------------+-------------+-----------------+--------------+-----------+----------------+---------------------+-------------+------------+--------------------+----------+----------------+---------+
+1 row in set (0.00 sec)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
