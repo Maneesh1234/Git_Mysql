@@ -1,0 +1,31 @@
+maneesh@maneesh:~$ sudo apt-get update
+maneesh@maneesh:~$ sudo apt-get install mysql-server
+maneesh@maneesh:~$ sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+
+**********change the settings************
+
+bind-address =10.11.12.101
+#mysqlx-bind-address     = 127.0.0.1
+server-id = 1
+log_bin                 = /var/log/mysql/mysql-bin.log
+
+
+
+aneesh@maneesh:~$ sudo service mysql restart
+[sudo] password for maneesh: 
+Job for mysql.service failed because the control process exited with error code.
+See "systemctl status mysql.service" and "journalctl -xe" for details.
+maneesh@maneesh:~$ systemctl status mysql.service
+● mysql.service - MySQL Community Server
+     Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: enabled)
+     Active: activating (start) since Mon 2021-03-01 17:32:17 IST; 2s ago
+    Process: 105778 ExecStartPre=/usr/share/mysql/mysql-systemd-start pre (code=exited, status=0/SUCCESS)
+   Main PID: 105786 (mysqld)
+     Status: "Server startup in progress"
+      Tasks: 33 (limit: 4654)
+     Memory: 329.1M
+     CGroup: /system.slice/mysql.service
+             └─105786 /usr/sbin/mysqld
+
+Mar 01 17:32:17 maneesh systemd[1]: Starting MySQL Community Server...
+maneesh@maneesh:~$
